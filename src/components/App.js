@@ -4,16 +4,12 @@ import '../styles/App.css';
 const App = () => {
 //code here 
 const [active,setActive]=useState(true);
-const handleChange=()=>
-{
-  setActive(!active);
-}
   return (
     <div id="main">
-      {
-        active ?<p className="redColor">Newton School</p>:<p className="blueColor">Newton School</p>
-}
-      <button id='button' onClick={handleChange}>Change Style</button>
+      
+     <p className={active?"redColor":"blueColor"}>Newton School</p>
+
+      <button id='button' onClick={()=>setActive(!active)}>Change Style</button>
     </div>
   )
 }
