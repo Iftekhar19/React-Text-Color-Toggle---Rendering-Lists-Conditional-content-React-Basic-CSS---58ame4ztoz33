@@ -10,7 +10,9 @@ const handleChange=()=>
 }
   return (
     <div id="main">
-      <p className={active?"redColor":"blueColor"}>Newton School</p>
+      {
+        active ?<p className="redColor">Newton School</p>:<p className="blueColor">Newton School</p>
+}
       <button id='button' onClick={handleChange}>Change Style</button>
     </div>
   )
