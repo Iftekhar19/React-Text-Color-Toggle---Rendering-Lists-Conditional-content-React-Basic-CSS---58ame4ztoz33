@@ -16,12 +16,17 @@ const [className,setClassName]=useState('redColor');
     setClassName("blueColor");
   }
  },[active])
+ const onButtonClick=()=>{
+
+  setActive(!active);
+  
+  }
   return (
     <div id="main">
       
      <p className={className}>Newton School</p>
 
-      <button id='button' onClick={()=>setActive(!active)}>Change Style</button>
+      <button id='button' onClick={onButtonClick}>Change Style</button>
     </div>
   )
 }
